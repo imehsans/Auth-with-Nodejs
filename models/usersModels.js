@@ -25,7 +25,7 @@ const userSchema = mongoose.Schema({
       trim: true,
       validate: {
          validator: function (v) {
-            // Supports international phone numbers with optional + prefix
+            // Supports  international phone numbers with optional + prefix
             return /^\+?\d{8,15}$/.test(v);
          },
          message: props => `${props.value} is not a valid phone number! Must be 8-15 digits, optionally starting with +`
